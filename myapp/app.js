@@ -1,6 +1,16 @@
 import express from "express";
+import router from "./my-router.js";
+
 const app = express();
 
+app.all("/anything", (req, res, next) => {
+  console.log("Anything method.");
+  next(); // передаємо управління далі
+});
+
+app.use("/", router);
+
+/*
 app.use((req, res, next) => {
   console.log("Наше проміжне ПЗ");
   next();
@@ -38,7 +48,7 @@ app.patch("/user/:userid", (req, res) => {
   console.log("id", id);
   // виконуємо необхідні дії
 });
-*/
+
 <form action="/login" method="POST">
   <label for="email">Email</label>
   <input type="text" name="email" id="email" />
@@ -46,6 +56,9 @@ app.patch("/user/:userid", (req, res) => {
   <input type="password" name="password" id="password" />
   <button type="submit">Увійти</button>
 </form>;
+
+*/
+
 app.listen(3000, () => {
-  console.log("Example app listening on port 3000!");
+  console.log("App listening on port 3000!");
 });
