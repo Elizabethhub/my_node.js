@@ -3,6 +3,10 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+require("dotenv").config();
+
+console.log(process.env.SECRET_KEY);
+console.log(process.env.NODE_ENV);
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
