@@ -18,3 +18,47 @@ router.get("/:id", function (req, res, next) {
 });
 
 module.exports = router;
+
+// var arrA = [1, 2];
+// var arrB = arrA;
+// arrA.push(3);
+// console.log(arrB);
+// arrA = [4, 5];
+// console.log(arrB);
+//
+// const array = [3, 2, 1, 3, 2, 5];
+// const el = array[array.length - 1];
+// console.log("el", array.pop());
+// const filtered = array.filter((el, index) => array.indexOf(el) === index);
+// console.log("filtered", filtered);
+///
+// let str = "test";
+// console.log(str[0]);
+// // str[0] = "T";
+// console.log(str);
+// console.log(getUsersApiUrl());
+
+// var BASE_URL = "/api/1";
+
+// function getUsersApiUrl() {
+//   return BASE_URL + "/users";
+// }
+// const user = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+
+// function createCar(owner) {
+//   return {
+//     id: 1,
+//     title: "Tesla Model X",
+//     getOwner: owner.getFullName(),
+//   };
+// }
+
+// const myCar = createCar(user);
+
+// console.log(myCar.getOwner);
